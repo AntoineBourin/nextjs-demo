@@ -1,3 +1,5 @@
+import Header from "@/components/Header";
+import PostProvider from "@/context/PostProvider";
 import "./globals.css";
 
 export const metadata = {
@@ -8,7 +10,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>
+          <PostProvider>{children}</PostProvider>
+        </main>
+      </body>
     </html>
   );
 }
