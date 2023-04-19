@@ -152,3 +152,32 @@ header ul {
   gap: 50px;
   list-style-type: none;
 }
+
+.post {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post button {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+form input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+form input[type="submit"] {
+  width: 20%;
+  border-radius: 10px;
+  border: 1px solid grey;
+}

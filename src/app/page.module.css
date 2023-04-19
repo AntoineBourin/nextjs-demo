@@ -22,9 +22,8 @@
   gap: 0.5rem;
 }
 
-.description p {
+.description > div {
   position: relative;
-  margin: 0;
   padding: 1rem;
   background-color: rgba(var(--callout-rgb), 0.5);
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);

@@ -1,14 +1,19 @@
-import PostList from "@/components/PostList";
-import { Inter } from "next/font/google";
+import PostForm from "@/components/PostForm";
+import PostItem from "@/components/PostItem";
+import { prisma } from "@/lib/prisma";
 import styles from "./page.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
+export default async function Home() {
+  const posts = await prisma.post.findMany();
 
-export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <PostList />
+        <h1>Ma todo-list</h1>
+        <PostForm />
+        {posts.map((post) => (
+          <PostItem post={post} key={post.id} />
+        ))}
       </div>
     </main>
   );
