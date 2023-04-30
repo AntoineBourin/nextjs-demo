@@ -1,5 +1,6 @@
 import React from "react";
 import PostAction from "./PostAction";
+import Link from "next/link";
 
 const PostItem = ({ post }) => {
   return (
@@ -7,7 +8,9 @@ const PostItem = ({ post }) => {
       className="post"
       style={{ textDecoration: post.isDone ? "line-through" : "" }}
     >
-      <p>{post.title}</p>
+      <p>
+        <Link href={`/posts/${post.id}`}>{post.title}</Link>
+      </p>
       <PostAction post={post} />
     </div>
   );

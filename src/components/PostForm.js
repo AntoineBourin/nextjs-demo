@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Counter from "./Counter";
 
 const PostForm = () => {
   const router = useRouter();
@@ -14,13 +15,21 @@ const PostForm = () => {
       body: JSON.stringify({
         title,
       }),
-    }).then(() => router.refresh());
+    })
+      .then((res) => res.json())
+      .then((post) => {
+        router.refresh();
+        router.push(`/posts/${post.id}`);
+      });
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="title" placeholder="Votre titre" />
-      <input type="submit" value="Ajouter" />
-    </form>
+    <div>
+      <Counter />
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="title" placeholder="Votre titre" />
+        <input type="submit" value="Ajouter" />
+      </form>
+    </div>
   );
 };
 
