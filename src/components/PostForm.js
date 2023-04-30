@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Counter from "./Counter";
 
 const PostForm = () => {
   const router = useRouter();
@@ -23,13 +22,10 @@ const PostForm = () => {
       });
   };
   return (
-    <div>
-      <Counter />
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="title" placeholder="Votre titre" />
-        <input type="submit" value="Ajouter" />
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input type="text" name="title" placeholder="Votre titre" />
+      <input type="submit" value="Ajouter" />
+    </form>
   );
 };
 
