@@ -9,10 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^4.16.2",
+    "jose": "^4.14.4",
     "eslint": "8.36.0",
     "eslint-config-next": "13.4",
-    "jsonwebtoken": "^9.0.0",
     "next": "13.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
