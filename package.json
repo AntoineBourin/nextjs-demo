@@ -11,10 +11,10 @@
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.0",
     "eslint": "8.36.0",
-    "eslint-config-next": "13.4",
+    "eslint-config-next": "13.4.10",
     "jose": "^4.14.4",
     "negotiator": "^0.6.3",
-    "next": "13.4",
+    "next": "13.4.10",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-slideshow-image": "^4.2.1"
